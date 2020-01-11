@@ -40,8 +40,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 #features-list span.icon i,
-#features-list h4, 
-#features-list p, 
+#features-list h4,
+#features-list p,
 #features-list a {
     color: #fff !important;
 }
@@ -202,8 +202,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .arowana-btn .boxed-btn {
-    font-size: 15px;    
-    color: #ffffff; 
+    font-size: 15px;
+    color: #ffffff;
     position: relative;
     padding: 0 25px !important;
     line-height: 40px;

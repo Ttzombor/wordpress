@@ -488,7 +488,6 @@ class WP_Comment_Query {
 		}
 
 		$this->comments = $comments;
-		($this->comments);
 		return $this->comments;
 	}
 

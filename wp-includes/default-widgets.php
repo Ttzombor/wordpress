@@ -65,7 +65,3 @@ require_once( ABSPATH . WPINC . '/widgets/class-wp-nav-menu-widget.php' );
 require_once( ABSPATH . WPINC . '/widgets/class-wp-widget-custom-html.php' );
 
 require_once( ABSPATH . WPINC . '/widgets/class-wp-widget.php' );
-
-
-
-

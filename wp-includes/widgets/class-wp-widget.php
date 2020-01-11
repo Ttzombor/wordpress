@@ -24,15 +24,16 @@ public function widget( $args, $instance ) {
 
     echo $args['before_widget'] . $args['before_title'] . $title . $args['after_title'];
 
-    $user_array = array();
-    $users = get_users();
-
     $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 5;
-		if ( ! $number ) {
-			$number = 5;
-		}
+    if ( ! $number ) {
+        $number = 5;
+    }
 
-		$zero_comments = $instance['zero_comments'];
+
+    $user_array = array();
+
+    $users = get_users();
+    $zero_comments = $instance['zero_comments'];
     $id = 0;
     foreach ($users as $user){
         $args = array(
@@ -54,7 +55,7 @@ public function widget( $args, $instance ) {
         ++$id;
             if($id == $number) break;
     }
-    arsort($user_array);
+    sort($user_array);
 ?>
     <ol>
     <?php

@@ -88,7 +88,7 @@ $GLOBALS['_wp_deprecated_widgets_callbacks'] = array(
 	'wp_widget_rss_control',
 	'wp_widget_recent_comments',
 	'wp_widget_recent_comments_control',
-    'wp_widget_my'
+    'wp_my_widget'
 );
 
 //
@@ -1759,7 +1759,6 @@ function wp_widgets_init() {
 	register_widget( 'WP_Widget_Custom_HTML' );
 
     register_widget( 'WP_My_Widget' );
-
 
 	/**
 	 * Fires after all default WordPress widgets have been registered.

@@ -15,7 +15,7 @@ if ( wp_using_themes() ) {
 
 /**
  * Filters whether to allow 'HEAD' requests to generate content.
- *
+ *te
  * Provides a significant performance bump by exiting before the page
  * content loads for 'HEAD' requests. See #14348.
  *

@@ -91,3 +91,59 @@ function custom_theme_customize_css(){
 }
 
 add_action('wp_head', 'custom_theme_customize_css');
+
+function custom_footer_theme_register($wp_customize){
+    $wp_customize->add_section('custom_footer_section', array(
+            'title' => __('Custom Footer')
+    ));
+
+    $wp_customize->add_setting('custom_footer_to_display_callout', array(
+        'default' => 'No'
+    ));
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'custom_footer_to_display_control', array(
+        'label' => 'Show on Page',
+        'section' => 'custom_footer_section',
+        'settings' => 'custom_footer_to_display_callout',
+        'type' => 'select',
+        'choices' => array('No' => 'No', 'Yes' => 'Yes')
+    )));
+
+    $wp_customize->add_setting('custom_footer_header_callout', array(
+            'default' => 'Custom Header'
+    ));
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'custom_footer_header_control', array(
+            'label' => 'Headline',
+            'section' => 'custom_footer_section',
+            'settings' => 'custom_footer_header_callout'
+    )));
+
+    $wp_customize->add_setting('custom_footer_text_callout', array(
+        'default' => 'Custom Text bla bla bla...'
+    ));
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'custom_footer_text_control', array(
+        'label' => 'Text',
+        'section' => 'custom_footer_section',
+        'settings' => 'custom_footer_text_callout',
+        'type' => 'textarea'
+    )));
+
+    $wp_customize->add_setting('custom_footer_link_callout');
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'custom_footer_link_control', array(
+        'label' => 'Link to page',
+        'section' => 'custom_footer_section',
+        'settings' => 'custom_footer_link_callout',
+        'type' => 'dropdown-pages'
+    )));
+
+    $wp_customize->add_setting('custom_footer_image_callout');
+    $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'custom_footer_image_control', array(
+        'label' => 'Crop Image',
+        'section' => 'custom_footer_section',
+        'settings' => 'custom_footer_image_callout',
+        'width' => 750,
+        'height' => 500
+    )));
+}
+
+add_action('customize_register', 'custom_footer_theme_register');

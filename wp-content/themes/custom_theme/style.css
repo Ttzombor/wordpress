@@ -137,6 +137,9 @@ article.post:last-of-type {
 
 /* Footer */
 .site-footer {
+
+    margin-left: 150px;
+    margin-right: 150px;
     margin-top: 30px;
     border-top: 1px solid #DDD;
     font-size: 84%;
@@ -305,3 +308,32 @@ article.post-gallery img{
 article.post-gallery h2{
     text-align: center;
 }
+
+.additional-footer-section {
+    background-color: lightgrey;
+    height: 150px;
+    width: 65%;
+}
+
+.additional-footer-section-image{
+    float: left;
+    width: 33%;
+
+    overflow: hidden;
+}
+
+.additional-footer-section-image img{
+    max-height: 145px;
+    padding: 5px;
+}
+
+.additional-footer-section-text{
+    float: right;
+    width: 67%;
+}
+.additional-footer-section-text h2{
+    padding-top: 5px;
+    font-size: 250%;
+    margin: 0 0 .35rem 0;
+}
+
